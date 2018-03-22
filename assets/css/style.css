@@ -1,0 +1,11 @@
+body {
+    background-image: url("../images/background.jpg");
+}
+
+img {
+    height: 150px;
+}
+
+#empty {
+    font-size: 30px;
+}

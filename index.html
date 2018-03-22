@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>crystal game week 4</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body>
+    <header class="container"><h1>Crystal Collector!</h1></header>
+
+    <br>
+
+    <div class="rules container">
+        <ul>
+            <li>You will be give a random number at the start of the game.</li>
+            <li>There are four crystals below. By clicking on a crystal you will add a spesific ammount of points to your total score.</li>
+            <li>You win if you match the number. You loose if you go over.</li>
+            <li>The value of each cristal is hidden.</li>
+            <li>Each game the value of each crystal will change.</li>
+        </ul>
+    </div>
+
+    <div class="random number container"><h2 id="random-number">Random Number</h2></div>
+
+    <div class="win loose container">
+        <ul>
+            <il id="empty"></il>
+            <li id="wins">Wins:</li>
+            <li id="losses">Losses:</li>
+        </ul>
+    </div>
+
+    <span id="red" class="crystal" value="random-red"><img src="assets/images/red.jpg"></span>
+    <span id="blue" class="crystal" value="random-blue"><img src="assets/images/blue.jpg"></span>
+    <span id="yellow" class="crystal" value="random-yellow"><img src="assets/images/yellow.jpg"></span>
+    <span id="green" class="crystal" value="random-green"><img src="assets/images/green.jpg"></span>
+
+    <div class="score container">
+        <h3>Your total score is:</h3>
+        <h3 id="total-score"></h3>
+    </div>
+    
+</body>
+</html>
