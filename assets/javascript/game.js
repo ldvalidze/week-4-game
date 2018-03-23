@@ -11,7 +11,9 @@ $(document).ready(function() {
 
     //Define startGame function
     var startGame = function() {
-        sum = 0
+        
+        sum = 0;
+        reset();
         //Generates random number between 19-120
         random = 18 + Math.floor(Math.random() * 102);
         //Displays random number in html
@@ -27,6 +29,8 @@ $(document).ready(function() {
         $("#red").on("click", function() {
             sum+=red;
             $("#total-score").text(sum);
+            console.log(sum);
+            console.log(red);
             check();
         });
         
@@ -49,29 +53,6 @@ $(document).ready(function() {
             check();
         });
     }
-    //Call startGame function
-    startGame();
-    
-
-    //??????????????????????????????????????????????????? if statemenst dont work
-    //If statements to define wins and losses
-    var check = function() {
-        if (sum === random) {
-            console.log("Yeah!")
-            wins++;
-            $("#wins").text("Wins: " + wins);
-            $("#empty").text("You Won!");
-            reset();
-            }   
-    
-        else if (sum > random) {
-            console.log("Naaah!")
-            $("#empty").text("You Lost!");  
-            losses++;
-            $("#losses").text("losses: " + losses);
-            reset();
-        }       
-    }
 
     var reset = function() {
         red = 0;
@@ -81,7 +62,33 @@ $(document).ready(function() {
         sum = 0;
         random = 0;
         $("#total-score").text("");
-        startGame();
     }
+
+    var check = function() {
+        if (sum === random) {
+            console.log("Yeah!")
+            wins++;
+            $("#wins").text("Wins: " + wins);
+            $("#empty").text("You Won!");
+            
+            startGame();
+            }   
+    
+        else if (sum > random) {
+            console.log("Naaah!")
+            $("#empty").text("You Lost!");  
+            losses++;
+            $("#losses").text("losses: " + losses);
+            
+            startGame();
+        }       
+    }
+    //Call startGame function
+    startGame();
+    
+
+    //??????????????????????????????????????????????????? if statemenst dont work
+    //If statements to define wins and losses
+    
     
 });
